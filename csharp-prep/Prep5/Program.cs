@@ -65,7 +65,7 @@ class Program
         int currentYear = DateTime.Now.Year;
         int age = currentYear - birthYear;
         Console.WriteLine($"Hello {name}, the square of your favorite number is {square}.");
-        Console.WriteLine($"You are {age} years old this year.");
+        Console.WriteLine($"You will turn {age} years old this year.");
     }
 
 }
