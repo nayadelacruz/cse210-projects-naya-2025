@@ -26,6 +26,7 @@ class Program
         }
         Scripture scripture = new Scripture(verseText, reference);
         int wordsToHidePerIteration = 2;
+        Console.Clear();
         Console.WriteLine(scripture.GetRenderedText());
         while (!scripture.CompletelyHidden())
         {
