@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Chose from the followinf scriptures and tipe which one you would want then press Enter:");
+        Console.WriteLine("Choose from the following scriptures and type which one you would want to practice, then press Enter:");
         Console.WriteLine("1. Genesis 1:1");
         Console.WriteLine("2. 3 Nephi 11:10-11");
         Console.WriteLine("3. John 3:16");
