@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Activity activity = new Activity(0);
         int duration;
         while (true)
         {
@@ -18,48 +17,54 @@ class Program
             Console.Clear();
             if (choice == 1)
             {
-                activity.ActivityDisplay(choice);
+                BreathingActivity bActivity = new BreathingActivity(0);
+                bActivity.ActivityDisplay(choice);
                 Console.WriteLine();
-                activity.SetDuration();
-                duration = activity.GetDuration();
+                bActivity.SetDuration();
+                duration = bActivity.GetDuration();
                 Console.Clear();
                 Console.Write("Get ready...");
-                activity.SpinnerTimer(5);
+                bActivity.SpinnerTimer(5);
                 Console.WriteLine();
-                BreathingActivity breathingActivity = new BreathingActivity(0);
-                breathingActivity.StartBreathing(duration);
+                //BreathingActivity breathingActivity = new BreathingActivity(0);
+                bActivity.StartBreathing(duration);
                 Console.WriteLine();
-                activity.GoodByeMessage(duration, choice);
+                bActivity.GoodByeMessage(duration, choice);
                 Console.Clear();
+                
             }
             else if (choice == 2)
             {
-                activity.ActivityDisplay(choice);
+                ReflectingActivity rActivity = new ReflectingActivity(0);
+                rActivity.ActivityDisplay(choice);
                 Console.WriteLine();
-                activity.SetDuration();
-                duration = activity.GetDuration();
+                rActivity.SetDuration();
+                duration = rActivity.GetDuration();
                 Console.Clear();
                 Console.WriteLine("Get ready...");
-                activity.SpinnerTimer(5);
-                ReflectingActivity reflectingActivity = new ReflectingActivity(0);
-                Console.WriteLine("Get ready...");
-                reflectingActivity.StartReflecting(duration);
-                activity.GoodByeMessage(duration, choice);
+                rActivity.SpinnerTimer(5);
+                //ReflectingActivity reflectingActivity = new ReflectingActivity(0);
+                Console.WriteLine();
+                rActivity.StartReflecting(duration);
+                Console.WriteLine();
+                rActivity.GoodByeMessage(duration, choice);
                 Console.Clear();
             }
             else if (choice == 3)
             {
-                activity.ActivityDisplay(choice);
+                ListingActivity listingActivity = new ListingActivity(0);
+                listingActivity.ActivityDisplay(choice);
                 Console.WriteLine();
-                activity.SetDuration();
-                duration = activity.GetDuration();
+                listingActivity.SetDuration();
+                duration = listingActivity.GetDuration();
                 Console.Clear();
                 Console.WriteLine("Get ready...");
-                activity.SpinnerTimer(5);
+                listingActivity.SpinnerTimer(5);
                 Console.WriteLine();
-                ListingActivity listingActivity = new ListingActivity(0);
+                //ListingActivity listingActivity = new ListingActivity(0);
                 listingActivity.StartListing(duration);
-                activity.GoodByeMessage(duration, choice);
+                Console.WriteLine();
+                listingActivity.GoodByeMessage(duration, choice);
                 Console.Clear();
             }
             else if (choice == 4)
