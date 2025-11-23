@@ -12,7 +12,6 @@ public class ChecklistGoal : Goal
         _currentCount = 0;
         _bonusPoints = 0;
     }
-
     public ChecklistGoal(string name, string desc, bool finished, int points, int target, int bonus, int count)
     : base(name, desc, finished, points, "ChecklistGoal")
 {
@@ -20,7 +19,6 @@ public class ChecklistGoal : Goal
     _bonusPoints = bonus;
     _currentCount = count;
 }
-
     public int GetTargetCount()
     {
         return _targetCount;
@@ -43,7 +41,6 @@ public class ChecklistGoal : Goal
         _currentCount = 0;
         Console.WriteLine();
     }
-
     public override void RecordEvent()
     {
         if (GetIsFinished())
@@ -63,6 +60,5 @@ public class ChecklistGoal : Goal
         {
             Console.WriteLine($"You have earned {GetPoints()} points! {_targetCount - _currentCount} more to go!");
         }
-        
     }   
 }

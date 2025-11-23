@@ -7,7 +7,6 @@ public class GoalsDao
     public GoalsDao()
     {
     }
-
     public void SaveGoals(string filename, List<Goal> goals)
     { 
         try
@@ -27,10 +26,8 @@ public class GoalsDao
         catch (Exception ex)
         {
             Console.WriteLine($"An error occurred while saving the goals: {ex.Message}");
-        }
-        
+        } 
     }
-    
     public List<Goal> LoadGoals(string filename)
     {
         List<Goal> goals = new List<Goal>();

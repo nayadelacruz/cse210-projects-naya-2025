@@ -7,12 +7,10 @@ public class SimpleGoal : Goal
     {
 
     }
-    
     public SimpleGoal(string name, string description, bool finished, int points)
     : base(name, description, finished, points, "SimpleGoal")
     {
     }
-
     public override void RecordEvent()
     {
         if (GetIsFinished())

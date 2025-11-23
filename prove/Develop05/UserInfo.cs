@@ -45,5 +45,4 @@ public class UserInfo
     {
         Console.WriteLine($"You have {_userPoints} points and your are at Level {_level}!!!");
     }
-
 }

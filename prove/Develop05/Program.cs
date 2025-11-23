@@ -20,7 +20,6 @@ class Program
             choice = program.GetUserChoice();
             program.HandleUserChoice(choice);
         }
-
     }
     public void DisplayMenu()
     {
