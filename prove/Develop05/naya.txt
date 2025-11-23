@@ -1,0 +1,3 @@
+|give a speech|during sacrament meeting|False|100|0|0|0
+|read the scriptures|every day during night|False|50|0|0|0
+|go to the temple|once each month|False|100|12|500|0

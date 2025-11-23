@@ -1,0 +1,3 @@
+SimpleGoal|give a speech|at church|True|50|0|0|0
+EternalGoal|read the scriptures|every night|False|100|0|0|0
+ChecklistGoal|go to the temple|every month|True|100|2|500|2
