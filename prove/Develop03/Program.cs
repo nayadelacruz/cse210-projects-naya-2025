@@ -10,36 +10,36 @@ class Program
         Console.WriteLine("2. 3 Nephi 11:10-11");
         Console.WriteLine("3. John 3:16");
         Console.Write("Your choice (1-3): ");
-        int choice = int.Parse(Console.ReadLine());
-        int chosenScripture = choice - 1;
+        int _choice = int.Parse(Console.ReadLine());
+        int _chosenScripture = _choice - 1;
         Scripture.InitializeScriptures();
-        string verseText = Scripture.GetScriptureText(chosenScripture);
+        string _verseText = Scripture.GetScriptureText(_chosenScripture);
         Reference.GenerateReferences();
-        Reference reference;
-        if (chosenScripture != 1)
+        Reference _reference;
+        if (_chosenScripture != 1)
         {
-            reference = new Reference(chosenScripture, false);
+            _reference = new Reference(_chosenScripture, false);
         }
         else
         {
-            reference = new Reference(chosenScripture, true);
+            _reference = new Reference(_chosenScripture, true);
         }
-        Scripture scripture = new Scripture(verseText, reference);
-        int wordsToHidePerIteration = 2;
+        Scripture _scripture = new Scripture(_verseText, _reference);
+        int _wordsToHidePerIteration = 2;
         Console.Clear();
-        Console.WriteLine(scripture.GetRenderedText());
-        while (!scripture.CompletelyHidden())
+        Console.WriteLine(_scripture.GetRenderedText());
+        while (!_scripture.CompletelyHidden())
         {
 
             Console.Write("Press Enter to continuo or 'quit' to exit: ");
-            string userInput = Console.ReadLine();
-            if (userInput.ToLower() == "quit")
+            string _userInput = Console.ReadLine();
+            if (_userInput.ToLower() == "quit")
             {
                 return;
             }
             Console.Clear();
-            scripture.HideRandomWords(wordsToHidePerIteration);
-            Console.WriteLine(scripture.GetRenderedText());
+            _scripture.HideRandomWords(_wordsToHidePerIteration);
+            Console.WriteLine(_scripture.GetRenderedText());
         }
     }
 }
