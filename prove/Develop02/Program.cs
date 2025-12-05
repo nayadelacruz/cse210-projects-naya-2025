@@ -1,6 +1,6 @@
 using System;
 using System.IO;
-
+//to exceed requirements I:Improve the process of saving and loading to save as a .csv file that could be opened in Excel 
 class Program
 {
     static void Main(string[] args)
