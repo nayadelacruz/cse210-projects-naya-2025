@@ -2,8 +2,8 @@ using System;
 class Running : Activity
 {
     private double _distanceInMiles;
-    public Running(DateTime date, int lengthMinugtes, double distance)
-        : base(date, lengthMinugtes)
+    public Running(DateTime date, int lengthMinutes, double distance)
+        : base(date, lengthMinutes)
         {
             _distanceInMiles = distance;
         }

@@ -31,7 +31,7 @@ class Program
         foreach (Video video in _videoList)
         {
             video.DisplayVideo();
-            video.DisplayCommentCount(video.GetComments());
+            Console.WriteLine($"Total Comments: {video.GetCommentCount()}");
             Console.WriteLine();
         }
     }

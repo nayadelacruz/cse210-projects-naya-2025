@@ -7,7 +7,6 @@ class Video
     private string _author;
     private int _lengthInSeconds;
     private List<Comment> _comments = new List<Comment>();
-
     public Video(string title, string author, int lengthInSeconds, List<Comment> comments)
     {
         _title = title;
@@ -15,7 +14,6 @@ class Video
         _lengthInSeconds = lengthInSeconds;
         _comments = comments;
     }
-    
     public string GetTitle()
     {
         return _title;
@@ -47,10 +45,9 @@ class Video
             throw new IndexOutOfRangeException("Comment index is out of range.");
         }
     }
-    public void DisplayCommentCount(List<Comment> comments)
+    public int GetCommentCount()
     {
-        int commentCount = comments.Count;
-        Console.WriteLine($"Number of comments: {commentCount}");
+        return _comments.Count;
     }
     public void DisplayVideo()
     {
@@ -63,6 +60,4 @@ class Video
             comment.DisplayComment();
         }
     }
-    
-
 }
